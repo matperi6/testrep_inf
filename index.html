@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f3f0e7">
+  <title>Drei gewinnt | Tic-Tac-Toe</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <main class="game-shell">
+    <header class="topbar">
+      <a class="wordmark" href="index.html" aria-label="Drei gewinnt, Startseite">
+        <span class="wordmark-symbol" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span>PAUSE<br>PLAY</span>
+      </a>
+      <p class="edition">DAS KLASSISCHE DUELL <span>·</span> SEIT IMMER</p>
+    </header>
+
+    <section class="game" aria-labelledby="game-title">
+      <div class="intro">
+        <p class="eyebrow"><span class="live-dot" aria-hidden="true"></span> ZWEI SPIELER · EIN FELD</p>
+        <h1 id="game-title">Drei gewinnt<span>.</span></h1>
+        <p class="subtitle">Ein gutes Spiel passt in neun Felder.</p>
+      </div>
+
+      <section class="scoreboard" aria-label="Punktestand">
+        <div class="player player-x is-active" id="player-x">
+          <span class="player-mark" aria-hidden="true">×</span>
+          <span class="player-info"><span class="player-name">Spieler 1</span><span class="player-label">KREUZ</span></span>
+          <span class="score" id="score-x">0</span>
+        </div>
+        <div class="draw-score" aria-label="Unentschieden"><span id="score-draw">0</span><span>REMIS</span></div>
+        <div class="player player-o" id="player-o">
+          <span class="player-mark" aria-hidden="true">○</span>
+          <span class="player-info"><span class="player-name">Spieler 2</span><span class="player-label">KREIS</span></span>
+          <span class="score" id="score-o">0</span>
+        </div>
+      </section>
+
+      <div class="board-wrap">
+        <p class="turn-line" id="game-status" role="status" aria-live="polite">× <span>Spieler 1 ist am Zug</span></p>
+        <div class="board" role="group" aria-label="Tic-Tac-Toe-Spielfeld">
+          <button class="cell" type="button" data-index="0" aria-label="Feld 1, leer"></button>
+          <button class="cell" type="button" data-index="1" aria-label="Feld 2, leer"></button>
+          <button class="cell" type="button" data-index="2" aria-label="Feld 3, leer"></button>
+          <button class="cell" type="button" data-index="3" aria-label="Feld 4, leer"></button>
+          <button class="cell" type="button" data-index="4" aria-label="Feld 5, leer"></button>
+          <button class="cell" type="button" data-index="5" aria-label="Feld 6, leer"></button>
+          <button class="cell" type="button" data-index="6" aria-label="Feld 7, leer"></button>
+          <button class="cell" type="button" data-index="7" aria-label="Feld 8, leer"></button>
+          <button class="cell" type="button" data-index="8" aria-label="Feld 9, leer"></button>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button class="button button-primary" id="new-game" type="button"><span aria-hidden="true">↻</span> Neue Runde</button>
+        <button class="button button-text" id="reset-scores" type="button">Punktestand zurücksetzen</button>
+      </div>
+      <p class="round-note">Drei in einer Reihe. Diagonal zählt auch.</p>
+    </section>
+
+    <footer class="footer"><span>GUTER ZUG.</span><span>NOCH EINE RUNDE?</span></footer>
+  </main>
+</body>
+</html>
